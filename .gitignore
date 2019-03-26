@@ -1,0 +1,4 @@
+# 檔案名稱 .gitignore
+
+# 忽略 tweet.py 檔案
+tweet_api.py
