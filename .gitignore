@@ -15,3 +15,6 @@ db.sqlite3
 
 # Jupyter Notebook
 .ipynb_checkpoints
+
+# VSCode
+.vscode/
