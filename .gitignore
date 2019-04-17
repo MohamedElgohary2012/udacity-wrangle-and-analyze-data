@@ -1,4 +1,20 @@
 # 檔案名稱 .gitignore
 
 # 忽略 tweet.py 檔案
-tweet_api.py
+keys.py
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# VSCode
+.vscode/
