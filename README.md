@@ -1,42 +1,40 @@
 ## Wrangle and Analyze Data
 
-### 介紹
+### Intro
 
 The dataset that you will be wrangling (and analyzing and visualizing) is the tweet archive of Twitter user [@dog_rates](https://twitter.com/dog_rates), also known as [WeRateDogs](https://en.wikipedia.org/wiki/WeRateDogs). WeRateDogs is a Twitter account that rates people's dogs with a humorous comment about the dog. These ratings almost always have a denominator of 10. The numerators, though? Almost always greater than 10. 11/10, 12/10, 13/10, etc. Why? Because "[they're good dogs Brent](http://knowyourmeme.com/memes/theyre-good-dogs-brent)." WeRateDogs has over 4 million followers and has received international media coverage.
 
-### 作業要求文件
+### Documents
 
-1. `wrangle_act.ipynb`
+1. `wrangle_act.ipynb` [中文版](https://github.com/wrayz/hw-wrangle-and-analyze-data/blob/develop/wrangle_act.ipynb)
 
-   - Gather：至少 3 個不同資料來源，3 種不同 DataFrame
-   - Accessing：每份 gathering data 至少可用兩種方式來進行評估（excel, python）
-   - Cleaning data：列出 8 點 quality issues, 2 點 tidiness issues
-   - Analyze and visualize：3 項 insights 和 1 項 visualization(必須提供自定義圖標標籤)
+    code for gathering, assessing, cleaning, analyzing, and visualizing data
+     - At least eight (8) data quality issues and two (2) tidiness issues are detected, and include the issues to clean to satisfy the Project Motivation. Each issue is documented in one to a few sentences each.
 
 2. `twitter_archive_master.csv`
 
-   合併及清理過的數據需存在這份文件或是 SQLite
+   combined and cleaned data
 
-3. `wrangle_report.html` (or pdf)
+3. `wrangle_report.html` [中文版](https://github.com/wrayz/hw-wrangle-and-analyze-data/blob/develop/wrangle_report.ipynb)
 
-   提交一份 300-600 字內部文件報告，簡短描述 wrangling efforts
+   documentation for data wrangling steps: gather, assess, and clean. (300-600 words)
 
-4. `act_report.html` (or pdf)
+4. `act_report.html` [中文版](https://github.com/wrayz/hw-wrangle-and-analyze-data/blob/develop/act_report.ipynb)
 
-   提交一份至少 250 字外部報告用在 blog post，描述我在 wrangling data 裡面的發現，解釋我的 insights 並且要視覺化
+   documentation of analysis and insights into final data. (250 words)
 
 5. `twitter_archive_enhanced.csv`
 
-   The WeRateDogs Twitter archive 作業提供
+   file as given
 
 6. `image-predictions.tsv`
 
-   The tweet image predictions 作業提供
+   file downloaded programmatically
 
 7. `tweet_json.txt`
 
-   Each tweet's retweet count and favorite ("like") count at minimum, and any additional data you find interesting. 自行從 twitter api 取得回應的資料
+   file constructed via API
 
 8. `tweet_api.py`
 
-   使用 twitter api 的程式（請勿提供自己的公私鑰）
+    Program using twitter api (do not provide your own public and private keys)
