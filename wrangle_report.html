@@ -16454,7 +16454,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In the proje proposal, I found that I ignored some of the contents of the object field, and this time I also corrected it.</p>
+<p>In the project feedback suggestions, I found that I ignored some of the contents of the object field, and this time I also corrected it.</p>
 
 </div>
 </div>
@@ -16557,7 +16557,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -16581,24 +16581,21 @@ div#notebook {
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
 RangeIndex: 1663 entries, 0 to 1662
-Data columns (total 15 columns):
+Data columns (total 12 columns):
 tweet_id          1663 non-null int64
 text              1663 non-null object
 expanded_urls     1663 non-null object
 name              1663 non-null object
-doggo             1663 non-null object
-floofer           1663 non-null object
-pupper            1663 non-null object
-puppo             1663 non-null object
 favorite_count    1663 non-null int64
 lang              1663 non-null object
 retweet_count     1663 non-null int64
 source            1663 non-null object
-created_at        1663 non-null object
+created_time      1663 non-null object
 rating_ratio      1663 non-null float64
+stage             1663 non-null object
 breed             1663 non-null object
-dtypes: float64(1), int64(3), object(11)
-memory usage: 195.0+ KB
+dtypes: float64(1), int64(3), object(8)
+memory usage: 156.0+ KB
 </pre>
 </div>
 </div>
@@ -16609,7 +16606,260 @@ memory usage: 195.0+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">breed</span> <span class="o">==</span> <span class="s1">&#39;golden_retriever&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">expanded_urls</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[7]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&#39;https://twitter.com/dog_rates/status/889531135344209921/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/888917238123831296/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/888804989199671297/photo/1,https://twitter.com/dog_rates/status/888804989199671297/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/883482846933004288/photo/1,https://twitter.com/dog_rates/status/883482846933004288/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/883117836046086144/photo/1,https://twitter.com/dog_rates/status/883117836046086144/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/882268110199369728/photo/1,https://twitter.com/dog_rates/status/882268110199369728/photo/1,https://twitter.com/dog_rates/status/882268110199369728/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/882045870035918850/photo/1,https://twitter.com/dog_rates/status/882045870035918850/photo/1,https://twitter.com/dog_rates/status/882045870035918850/photo/1,https://twitter.com/dog_rates/status/882045870035918850/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/880465832366813184/photo/1,https://twitter.com/dog_rates/status/880465832366813184/photo/1,https://twitter.com/dog_rates/status/880465832366813184/photo/1,https://twitter.com/dog_rates/status/880465832366813184/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/876484053909872640/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/870374049280663552/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/865718153858494464/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/864197398364647424/photo/1,https://twitter.com/dog_rates/status/864197398364647424/photo/1,https://twitter.com/dog_rates/status/864197398364647424/photo/1,https://twitter.com/dog_rates/status/864197398364647424/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/859607811541651456/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/858843525470990336/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/858107933456039936/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/857029823797047296/photo/1,https://twitter.com/dog_rates/status/857029823797047296/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/852672615818899456/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/846514051647705089/photo/1,https://twitter.com/dog_rates/status/846514051647705089/photo/1,https://twitter.com/dog_rates/status/846514051647705089/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/846042936437604353/photo/1&#39;,
+ &#39;https://www.gofundme.com/3hgsuu0,https://twitter.com/dog_rates/status/840632337062862849/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/837820167694528512/photo/1,https://twitter.com/dog_rates/status/837820167694528512/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/834574053763584002/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/834209720923721728/photo/1,https://twitter.com/dog_rates/status/834209720923721728/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/833479644947025920/photo/1,https://twitter.com/dog_rates/status/833479644947025920/photo/1,https://twitter.com/dog_rates/status/833479644947025920/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/829141528400556032/photo/1,https://twitter.com/dog_rates/status/829141528400556032/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/828650029636317184/photo/1,https://twitter.com/dog_rates/status/828650029636317184/photo/1,https://twitter.com/dog_rates/status/828650029636317184/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/827324948884643840/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/826958653328592898/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/826115272272650244/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/821886076407029760/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/821765923262631936/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/820749716845686786/photo/1,https://twitter.com/dog_rates/status/820749716845686786/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/818145370475810820/photo/1,https://twitter.com/dog_rates/status/818145370475810820/photo/1,https://twitter.com/dog_rates/status/818145370475810820/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/817171292965273600/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/814638523311648768/photo/1,https://twitter.com/dog_rates/status/814638523311648768/photo/1,https://twitter.com/dog_rates/status/814638523311648768/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/814153002265309185/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/813187593374461952/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/813172488309972993/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/813051746834595840/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/812372279581671427/photo/1,https://twitter.com/dog_rates/status/812372279581671427/photo/1&#39;,
+ &#39;https://www.gofundme.com/sams-smile,https://twitter.com/dog_rates/status/810984652412424192/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/808106460588765185/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/807621403335917568/photo/1,https://twitter.com/dog_rates/status/807621403335917568/photo/1,https://twitter.com/dog_rates/status/807621403335917568/photo/1,https://twitter.com/dog_rates/status/807621403335917568/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/807010152071229440/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/802572683846291456/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/800388270626521089/photo/1,https://twitter.com/dog_rates/status/800388270626521089/photo/1,https://twitter.com/dog_rates/status/800388270626521089/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/800141422401830912/photo/1,https://twitter.com/dog_rates/status/800141422401830912/photo/1,https://twitter.com/dog_rates/status/800141422401830912/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/796149749086875649/photo/1,https://twitter.com/dog_rates/status/796149749086875649/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/796031486298386433/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/795464331001561088/video/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/795400264262053889/photo/1,https://twitter.com/dog_rates/status/795400264262053889/photo/1,https://twitter.com/dog_rates/status/795400264262053889/photo/1,https://twitter.com/dog_rates/status/795400264262053889/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/793500921481273345/photo/1,https://twitter.com/dog_rates/status/793500921481273345/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/793241302385262592/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/793165685325201412/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/791672322847637504/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/790946055508652032/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/789986466051088384/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/788908386943430656/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/788412144018661376/photo/1,https://twitter.com/dog_rates/status/788412144018661376/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/787322443945877504/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/786963064373534720/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/786363235746385920/photo/1,https://twitter.com/dog_rates/status/786363235746385920/photo/1,https://twitter.com/dog_rates/status/786363235746385920/photo/1,https://twitter.com/dog_rates/status/786363235746385920/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/782969140009107456/photo/1,https://twitter.com/dog_rates/status/782969140009107456/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/782747134529531904/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/780543529827336192/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/779834332596887552/photo/1,https://twitter.com/dog_rates/status/779834332596887552/photo/1,https://twitter.com/dog_rates/status/779834332596887552/photo/1,https://twitter.com/dog_rates/status/779834332596887552/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/772152991789019136/photo/1,https://twitter.com/dog_rates/status/772152991789019136/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/771136648247640064/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/770414278348247044/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/769212283578875904/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/765719909049503744/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/765371061932261376/photo/1,https://twitter.com/dog_rates/status/765371061932261376/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/761004547850530816/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/760656994973933572/photo/1,https://twitter.com/dog_rates/status/760656994973933572/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/759793422261743616/photo/1,https://twitter.com/dog_rates/status/759793422261743616/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/759557299618865152/photo/1,https://twitter.com/dog_rates/status/759557299618865152/photo/1,https://twitter.com/dog_rates/status/759557299618865152/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/757400162377592832/photo/1,https://twitter.com/dog_rates/status/757400162377592832/photo/1,https://twitter.com/dog_rates/status/757400162377592832/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/756998049151549440/photo/1,https://twitter.com/dog_rates/status/756998049151549440/photo/1,https://twitter.com/dog_rates/status/756998049151549440/photo/1,https://twitter.com/dog_rates/status/756998049151549440/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/756939218950160384/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/756303284449767430/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/754856583969079297/photo/1,https://twitter.com/dog_rates/status/754856583969079297/photo/1,https://twitter.com/dog_rates/status/754856583969079297/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/751456908746354688/video/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/750429297815552001/photo/1,https://twitter.com/dog_rates/status/750429297815552001/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/750101899009982464/photo/1,https://twitter.com/dog_rates/status/750101899009982464/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/746726898085036033/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/743210557239623680/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/741067306818797568/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/740373189193256964/photo/1,https://twitter.com/dog_rates/status/740373189193256964/photo/1,https://twitter.com/dog_rates/status/740373189193256964/photo/1,https://twitter.com/dog_rates/status/740373189193256964/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/740359016048689152/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/736010884653420544/photo/1,https://twitter.com/dog_rates/status/736010884653420544/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/734787690684657664/photo/1,https://twitter.com/dog_rates/status/734787690684657664/photo/1,https://twitter.com/dog_rates/status/734787690684657664/photo/1,https://twitter.com/dog_rates/status/734787690684657664/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/733109485275860992/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/724983749226668032/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/724405726123311104/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/723673163800948736/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/719991154352222208/photo/1,https://twitter.com/dog_rates/status/719991154352222208/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/719339463458033665/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/718971898235854848/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/717537687239008257/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/717047459982213120/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/716080869887381504/photo/1,https://twitter.com/dog_rates/status/716080869887381504/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/715680795826982913/photo/1,https://twitter.com/dog_rates/status/715680795826982913/photo/1,https://twitter.com/dog_rates/status/715680795826982913/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/713900603437621249/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/709556954897764353/photo/1,https://twitter.com/dog_rates/status/709556954897764353/photo/1,https://twitter.com/dog_rates/status/709556954897764353/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/708810915978854401/photo/1,https://twitter.com/dog_rates/status/708810915978854401/photo/1,https://twitter.com/dog_rates/status/708810915978854401/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/707610948723478529/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/707377100785885184/photo/1,https://twitter.com/dog_rates/status/707377100785885184/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/706516534877929472/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/705970349788291072/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/705475953783398401/photo/1,https://twitter.com/dog_rates/status/705475953783398401/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/704847917308362754/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/703382836347330562/photo/1,https://twitter.com/dog_rates/status/703382836347330562/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/702684942141153280/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/702217446468493312/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/700143752053182464/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/699801817392291840/photo/1,https://twitter.com/dog_rates/status/699801817392291840/photo/1,https://twitter.com/dog_rates/status/699801817392291840/photo/1,https://twitter.com/dog_rates/status/699801817392291840/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/699434518667751424/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/693262851218264065/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/692568918515392513/photo/1,https://twitter.com/dog_rates/status/692568918515392513/photo/1,https://twitter.com/dog_rates/status/692568918515392513/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/690959652130045952/photo/1,https://twitter.com/dog_rates/status/690959652130045952/photo/1,https://twitter.com/dog_rates/status/690959652130045952/photo/1,https://twitter.com/dog_rates/status/690959652130045952/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/690735892932222976/photo/1,https://twitter.com/dog_rates/status/690735892932222976/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/688385280030670848/photo/1,https://twitter.com/dog_rates/status/688385280030670848/photo/1,https://twitter.com/dog_rates/status/688385280030670848/photo/1,https://twitter.com/dog_rates/status/688385280030670848/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/685325112850124800/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/683098815881154561/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/680100725817409536/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/679047485189439488/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/678341075375947776/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/676470639084101634/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/676430933382295552/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/675740360753160193/video/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/675354435921575936/video/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/675147105808306176/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/675015141583413248/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/674422304705744896/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/673708611235921920/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/673583129559498752/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/673352124999274496/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/673295268553605120/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/672622327801233409/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/672523490734551040/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/672125275208069120/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/669625907762618368/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/669363888236994561/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/669327207240699904/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/669216679721873412/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/668979806671884288/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/668852170888998912/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/668286279830867968/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/667530908589760512/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/667211855547486208/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/667182792070062081/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/667160273090932737/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/667044094246576128/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/666345417576210432/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/666063827256086533/photo/1&#39;,
+ &#39;https://twitter.com/dog_rates/status/666057090499244032/photo/1&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Mapping the data levels in the above fields. With these levels, there is a direction to be visualized after</p>
+<table>
+<thead><tr>
+<th>Column</th>
+<th>Data Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tweet_id</td>
+<td>Nominal</td>
+</tr>
+<tr>
+<td>text</td>
+<td>Nominal</td>
+</tr>
+<tr>
+<td>expanded_urls</td>
+<td>Nominal</td>
+</tr>
+<tr>
+<td>name</td>
+<td>Nominal</td>
+</tr>
+<tr>
+<td>favorite_count</td>
+<td>Discrete</td>
+</tr>
+<tr>
+<td>lang</td>
+<td>Nominal</td>
+</tr>
+<tr>
+<td>retweet_count</td>
+<td>Discrete</td>
+</tr>
+<tr>
+<td>source</td>
+<td>Nominal</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>Continuous</td>
+</tr>
+<tr>
+<td>rating_ratio</td>
+<td>Ordinal</td>
+</tr>
+<tr>
+<td>stage</td>
+<td>Nominal</td>
+</tr>
+<tr>
+<td>breed</td>
+<td>Nominal</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">subprocess</span> <span class="k">import</span> <span class="n">call</span>
@@ -16626,7 +16876,7 @@ memory usage: 195.0+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[2]:</div>
+    <div class="prompt output_prompt">Out[3]:</div>
 
 
 
